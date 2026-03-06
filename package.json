@@ -1,0 +1,33 @@
+{
+  "name": "lloog-cli",
+  "version": "1.0.0",
+  "description": "拉取自定义框架",
+  "main": "index.js",
+  "bin": {
+    "LLOOG_cli": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LLOOG0815/framework.git"
+  },
+  "keywords": [
+    "cli",
+    "git",
+    "github"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LLOOG0815/framework/issues"
+  },
+  "homepage": "https://github.com/LLOOG0815/framework#readme",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.16",
+    "simple-git": "^3.24.0",
+    "fs-extra": "^11.2.0"
+  }
+}

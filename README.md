@@ -1,19 +1,38 @@
-# 个人框架
+# LLOOG CLI
 
-这是一个通用个人框架。
+创建自定义框架的 CLI 工具。
 
-## 技术栈
+## 安装
 
-- **Vue**
-- **React**
+```bash
+npm install -g lloog-cli
+```
 
-## 特性
+## 使用方法
 
-- 统一的代码规范和目录结构
-- 常用业务组件封装
-- 工具函数库
-- 状态管理方案
+```bash
+lloog_cli create
+```
 
-## 快速开始
+### 选项
 
-请切换到对应分支获取具体代码。
+- `-o, --output <dir>` - 输出目录（默认: `./framework`）
+
+## 示例
+
+```bash
+# 使用默认输出目录 ./framework
+lloog_cli create
+
+# 指定自定义输出目录
+lloog_cli create -o myFramework
+```
+
+运行命令后：
+1. 选择要创建的框架（React 或 Vue）
+2. 输入输出目录（默认 `./framework`）
+3. 等待框架创建完成
+
+## 相关链接
+
+- GitHub: https://github.com/LLOOG0815/framework
