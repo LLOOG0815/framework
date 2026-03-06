@@ -7,7 +7,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { compression } from "vite-plugin-compression2"
 import { VitePWA } from "vite-plugin-pwa"
-import autoprefixer from 'autoprefixer'
+import tailwindcss from "@tailwindcss/vite"
 import cssnano from 'cssnano'
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssPxToViewport from 'postcss-px-to-viewport-8-plugin'
@@ -16,11 +16,12 @@ import postcssPxToViewport from 'postcss-px-to-viewport-8-plugin'
 export default defineConfig(({ mode }): import('vite').UserConfig => {
   // 加载环境变量
   const env = loadEnv(mode, process.cwd(), '')
-  
+
   return {
     plugins: [
       vue(),
       vueJsx(),
+      tailwindcss(),
       vueDevTools(),
       compression({
         deleteOriginalAssets: false,
@@ -76,8 +77,6 @@ export default defineConfig(({ mode }): import('vite').UserConfig => {
       },
       postcss: {
         plugins: [
-          // 自动添加浏览器前缀
-          autoprefixer,
           // 将现代 CSS 特性转换为浏览器兼容的代码
           postcssPresetEnv({
             autoprefixer: {
@@ -102,7 +101,6 @@ export default defineConfig(({ mode }): import('vite').UserConfig => {
         ]
       }
     },
-    envDir: './env',
     server: {
       open: true,
       port: 8888,
@@ -123,11 +121,6 @@ export default defineConfig(({ mode }): import('vite').UserConfig => {
           rewrite: (path) => path.replace(/^\/api/, '')
         }
       }
-    },
-    // 环境变量
-    define: {
-      'process.env.NODE_ENV': JSON.stringify(mode),
-      'import.meta.env.VITE_APP_API_URL': JSON.stringify(env.VITE_APP_API_URL || 'http://localhost:3000')
     }
   }
 })

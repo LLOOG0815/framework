@@ -1,13 +1,13 @@
 <template>
   <WelcomeItem />
 
-  <div class="i18n-test-section">
+  <div class="mt-8 p-5 border border-gray-300 rounded-lg">
     <!-- 日期选择器 -->
-    <div class="test-item">
+    <div class="mb-8 p-4 bg-gray-50 rounded">
       <el-date-picker v-model="dateValue" type="date" style="width: 200px" />
     </div>
     <!-- getTime.formatDate 示例 -->
-    <div class="test-item">
+    <div class="mb-8 p-4 bg-gray-50 rounded">
       <div>
         <p>{{ formattedDate }}</p>
       </div>
@@ -27,18 +27,4 @@ const formattedDate = computed(() => {
 })
 </script>
 
-<style scoped>
-.i18n-test-section {
-  margin-top: 30px;
-  padding: 20px;
-  border: 1px solid #dcdfe6;
-  border-radius: 8px;
-}
-
-.test-item {
-  margin-bottom: 30px;
-  padding: 15px;
-  background-color: #f5f7fa;
-  border-radius: 4px;
-}
-</style>
+<style scoped></style>

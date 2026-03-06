@@ -1,21 +1,23 @@
 <template>
-  <div class="welcome-item">
-    <div class="header">
-      <h2 class="welcome-title">{{ $t('message.welcome') }}</h2>
+  <div class="bg-white rounded-lg p-6 shadow-md max-w-2xl mx-auto">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-blue-600 text-2xl m-0">{{ $t('message.welcome') }}</h2>
       <LanguageSelector />
     </div>
 
-    <div class="counter-section">
-      <h3>{{ $t('message.counter') }}</h3>
-      <div class="counter-display">
-        <p>{{ $t('message.currentCount') }}: <span class="count-value">{{ count }}</span></p>
-        <p>{{ $t('message.doubleCount') }}: <span class="double-count">{{ doubleCount }}</span></p>
-        <p>{{ $t('message.changeCount') }}: {{ changeCount }}</p>
-        <p v-if="count > 5" class="warning-message">
+    <div class="mb-6 pb-4 border-b border-gray-200">
+      <h3 class="text-gray-800 mb-4 text-lg">{{ $t('message.counter') }}</h3>
+      <div class="mb-4">
+        <p class="mb-2 text-base">{{ $t('message.currentCount') }}: <span
+            class="count-value font-bold text-blue-600 text-lg">{{ count }}</span></p>
+        <p class="mb-2 text-base">{{ $t('message.doubleCount') }}: <span
+            class="double-count font-bold text-blue-600 text-lg">{{ doubleCount }}</span></p>
+        <p class="mb-2 text-base">{{ $t('message.changeCount') }}: {{ changeCount }}</p>
+        <p v-if="count > 5">
           {{ $t('message.warning') }}
         </p>
       </div>
-      <div class="counter-actions">
+      <div class="flex gap-4">
         <el-button @click="increment" type="primary">
           {{ $t('message.increment') }}
         </el-button>
@@ -55,81 +57,4 @@ watch(count, (newValue, oldValue) => {
 })
 </script>
 
-<style scoped lang="scss">
-.welcome-item {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow-md);
-  max-width: 600px;
-  margin: 0 auto;
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing-lg);
-
-    .welcome-title {
-      color: var(--primary-color);
-      font-size: var(--font-size-xl);
-      margin: 0;
-    }
-  }
-
-  .counter-section {
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--border-light);
-
-    &:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    h3 {
-      color: var(--text-primary);
-      margin-bottom: var(--spacing-md);
-      font-size: var(--font-size-lg);
-    }
-  }
-
-  .counter-display {
-    margin-bottom: var(--spacing-md);
-
-    p {
-      margin-bottom: var(--spacing-sm);
-      font-size: var(--font-size-base);
-
-      .count-value,
-      .double-count {
-        font-weight: bold;
-        color: var(--primary-color);
-        font-size: var(--font-size-lg);
-      }
-    }
-  }
-
-  .counter-actions {
-    display: flex;
-    gap: var(--spacing-md);
-  }
-}
-
-.language-test-section {
-  margin-top: var(--spacing-lg);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--border-light);
-
-  h3 {
-    color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
-    font-size: var(--font-size-lg);
-  }
-
-  .el-alert {
-    margin-top: var(--spacing-sm);
-  }
-}
-</style>
+<style scoped lang="scss"></style>
