@@ -1,9 +1,7 @@
 import { Outlet } from "react-router";
-import { Provider } from "react-redux";
 import { ConfigProvider } from 'antd';
 import { useState, useEffect } from 'react';
 import i18n from '@/i18n';
-import { store } from "@/store";
 import { getCurrentLocale } from '@/utils/changeLang';
 import "@/assets/style/app.css";
 
@@ -22,10 +20,8 @@ export default function App() {
   }, []);
 
   return (
-    <Provider store={store}>
-      <ConfigProvider locale={locale}>
-        <Outlet />
-      </ConfigProvider>
-    </Provider>
+    <ConfigProvider locale={locale}>
+      <Outlet />
+    </ConfigProvider>
   );
 }

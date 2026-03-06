@@ -44,7 +44,7 @@ export default defineConfig(({ mode }): import('vite').UserConfig => {
       conditions: ['es2015', 'module', 'browser']
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'react-router', 'react-redux'],
+      include: ['react', 'react-dom', 'react-router', 'zustand'],
       exclude: [],
       // 强制预构建
       force: false

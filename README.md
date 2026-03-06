@@ -1,61 +1,61 @@
-# Welcome to React Router!
+# 欢迎使用 React Router！
 
-A modern, production-ready template for building full-stack React applications using React Router.
+一个现代的、生产就绪的模板，用于使用 React Router 构建全栈 React 应用程序。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+[![在 StackBlitz 中打开](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## Features
+## 特性
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🚀 服务端渲染
+- ⚡️ 模块热替换 (HMR)
+- 📦 资源打包和优化
+- 🔄 数据加载和变更
+- 🔒 默认使用 TypeScript
+- 🎉 使用 TailwindCSS 进行样式设计
+- 📖 [React Router 文档](https://reactrouter.com/)
 
-## Getting Started
+## 快速开始
 
-### Installation
+### 安装
 
-Install the dependencies:
+安装依赖：
 
 ```bash
 npm install
 ```
 
-### Development
+### 开发
 
-Start the development server with HMR:
+启动带有 HMR 的开发服务器：
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+您的应用程序将在 http://localhost:5173 可访问。
 
-## Building for Production
+## 为生产环境构建
 
-Create a production build:
+创建生产构建：
 
 ```bash
 npm run build
 ```
 
-## Deployment
+## 部署
 
-### Docker Deployment
+### Docker 部署
 
-To build and run using Docker:
+使用 Docker 构建和运行：
 
 ```bash
 docker build -t my-app .
 
-# Run the container
+# 运行容器
 docker run -p 3000:3000 my-app
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+容器化的应用程序可以部署到任何支持 Docker 的平台，包括：
 
 - AWS ECS
 - Google Cloud Run
@@ -64,24 +64,24 @@ The containerized application can be deployed to any platform that supports Dock
 - Fly.io
 - Railway
 
-### DIY Deployment
+### 自定义部署
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+如果您熟悉部署 Node 应用程序，内置的应用服务器已准备好用于生产环境。
 
-Make sure to deploy the output of `npm run build`
+确保部署 `npm run build` 的输出
 
 ```
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── package-lock.json (或 pnpm-lock.yaml 或 bun.lockb)
 ├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+│   ├── client/    # 静态资源
+│   └── server/    # 服务端代码
 ```
 
-## Styling
+## 样式
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+此模板已为您配置好了 Tailwind CSS，可提供简单的默认起始体验。您可以使用任何您喜欢的 CSS 框架。
 
 ---
 
-Built with ❤️ using React Router.
+使用 ❤️ 构建，基于 React Router。

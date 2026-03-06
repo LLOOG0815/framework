@@ -39,6 +39,6 @@ __screenshots__/
 # Vite
 *.timestamp-*-*.mjs
 
-# react
+# code
 .react-router
 build
