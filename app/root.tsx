@@ -1,15 +1,31 @@
-import {
-  Outlet,
-} from "react-router";
+import { Outlet } from "react-router";
 import { Provider } from "react-redux";
-import { store } from "./store";
-
-import "./app.css";
+import { ConfigProvider } from 'antd';
+import { useState, useEffect } from 'react';
+import i18n from '@/i18n';
+import { store } from "@/store";
+import { getCurrentLocale } from '@/utils/changeLang';
+import "@/assets/style/app.css";
 
 export default function App() {
+  const [locale, setLocale] = useState(getCurrentLocale());
+
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setLocale(getCurrentLocale());
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, []);
+
   return (
     <Provider store={store}>
-      <Outlet />
+      <ConfigProvider locale={locale}>
+        <Outlet />
+      </ConfigProvider>
     </Provider>
   );
 }

@@ -1,0 +1,29 @@
+{
+  "welcome": {
+    "title": "Welcome to React Router",
+    "description": "This is a React Router application",
+    "gettingStarted": "Getting Started"
+  },
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact Us",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "language": {
+    "switch": "Switch Language",
+    "zhCN": "简体中文",
+    "enUS": "English"
+  }
+}
