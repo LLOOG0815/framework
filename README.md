@@ -33,6 +33,10 @@ lloog_cli create -o myFramework
 2. 输入输出目录（默认 `./framework`）
 3. 等待框架创建完成
 
+## 部署方法
+npm login
+npm publish
+
 ## 相关链接
 
 - GitHub: https://github.com/LLOOG0815/framework
